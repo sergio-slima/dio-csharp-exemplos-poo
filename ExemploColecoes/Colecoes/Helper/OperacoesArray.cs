@@ -36,5 +36,13 @@ namespace Colecoes.Helper
     {
       return Array.Exists(array, elemento => elemento == valor);
     }
+    public bool MaiorQue(int[] array, int valor)
+    {
+      return Array.TrueForAll(array, elemento => elemento > valor);
+    }
+    public int BuscarValor(int[] array, int valor)
+    {
+      return Array.Find(array, elemento => elemento == valor);
+    }
   }
 }
