@@ -11,13 +11,35 @@ namespace Colecoes
       // ARRAY BUBLLE SORT
       OperacoesArray op = new OperacoesArray();
       int[] array = new int[5] { 6, 3, 8, 1, 9 };
+      int[] arrayCopia = new int[10];
 
-      System.Console.WriteLine("Array original:");
-      op.ImprimirArray(array);
+      int valorProcurado = 1;
+      bool existe = op.Existe(array, valorProcurado);
 
-      op.OrdernarBubbleSort(ref array);
-      System.Console.WriteLine("Array ordenado:");
-      op.ImprimirArray(array);
+      if (existe)
+      {
+        System.Console.WriteLine("Encontrei o valor: (0)", valorProcurado);
+      }
+      else
+      {
+        System.Console.WriteLine("Não encontrei o valor: (0)", valorProcurado);
+      }
+
+      // System.Console.WriteLine("Array original:");
+      // op.ImprimirArray(array);
+
+      // op.OrdernarBubbleSort(ref array);
+      //op.Ordenar(ref array);      
+
+      // System.Console.WriteLine("Array ordenado:");
+      // op.ImprimirArray(array);
+
+      // System.Console.WriteLine("Array antes da copia:");
+      // op.ImprimirArray(arrayCopia);
+
+      // op.Copiar(ref array, ref arrayCopia);
+      // System.Console.WriteLine("Array após a cópia:");
+      // op.ImprimirArray(arrayCopia);
 
       // ARRAY MATRIZ
       // int[,] matriz = new int[4, 2]
