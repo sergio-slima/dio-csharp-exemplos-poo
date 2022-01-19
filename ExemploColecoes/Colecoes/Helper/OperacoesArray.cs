@@ -44,5 +44,17 @@ namespace Colecoes.Helper
     {
       return Array.Find(array, elemento => elemento == valor);
     }
+    public int ObterIndice(int[] array, int valor)
+    {
+      return Array.IndexOf(array, valor);
+    }
+    public void RedimensionarArray(ref int[] array, int novoTam)
+    {
+      Array.Resize(ref array, novoTam);
+    }
+    public string[] CoverterArrayForString(int[] array)
+    {
+      return Array.ConvertAll(array, elemento => elemento.ToString());
+    }
   }
 }

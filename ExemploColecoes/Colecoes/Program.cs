@@ -12,8 +12,19 @@ namespace Colecoes
       OperacoesArray op = new OperacoesArray();
       int[] array = new int[5] { 6, 3, 8, 1, 9 };
       int[] arrayCopia = new int[10];
+      string[] arrayString = op.CoverterArrayForString(array);
 
       int valorProcurado = 8;
+
+      System.Console.WriteLine($"Capacidade atual do array: {array.Length}");
+      op.RedimensionarArray(ref array, array.Length * 2);
+      System.Console.WriteLine($"Capacidade array redimencionado: {array.Length}");
+
+      int indice = op.ObterIndice(array, valorProcurado);
+      if (indice > -1)
+      {
+        System.Console.WriteLine($"O indice do elemento {valorProcurado} é: {indice}");
+      }
 
       int valorAchado = op.BuscarValor(array, valorProcurado);
       if (valorAchado > 0)
